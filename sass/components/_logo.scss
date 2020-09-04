@@ -1,0 +1,35 @@
+.site-nav-logo {
+    display: flex;
+    align-items: center;
+
+     .logo {
+        display: block;
+        padding-top: 24px;
+        padding-bottom: 25px;
+      }
+  }
+
+.logo {
+    color: #000000;
+  
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+
+        .logo-color {
+            color: $accent-color;
+          }
+          
+  }
+  
+ 

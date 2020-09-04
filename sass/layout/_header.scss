@@ -1,0 +1,17 @@
+header{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: $primary-white-color;
+    z-index: 98;
+  }
+  .header-nav {
+    border-bottom: 1px solid #ECECEC;
+  }
+  .main-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  

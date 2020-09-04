@@ -1,0 +1,22 @@
+/* address */
+.foot-address {
+    flex-basis: 270px;
+
+  }
+  address p {
+    color: $primary-white-color;
+    font-style: normal;
+  
+    margin-top: 20px;
+    margin-bottom: 9px;
+  }
+  address .link {
+    display: inline-block;
+    color: $footer-link-color;
+    text-decoration: none;
+    font-style: normal;
+
+        &:not(:last-child) {
+            margin-bottom: 9px;
+          }
+  }

@@ -1,0 +1,79 @@
+ .projects {
+    font-size: 18px;
+    line-height: 1.56;
+
+    .text {
+        padding: 20px 24px;
+        border-left: 1px solid #EEEEEE;
+        border-bottom: 1px solid #EEEEEE;
+        border-right: 1px solid #EEEEEE;
+      }
+  }
+  
+  .projects-title {
+    margin-top: 0;
+    margin-bottom: 4px;
+  
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+  }
+  
+  .card-hover{
+    position: relative;
+    overflow: hidden;
+  
+    .hover-text {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 64px 24px;
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.56;
+    color: $primary-white-color;
+    background-color: $hover-color-blue;
+    
+    transform: translateY(100%);
+    transition-property: translate(Y);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    }
+}
+ 
+  .picture.projects-img {
+   width: 100%;
+  }
+  
+  .projects-link {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus{
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  
+     }
+        &:hover .hover-text,
+        &:focus .hover-text {
+        transform: translateY(0%);
+    }
+  }
+ 
+  .projects-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+    margin: 0;
+  }
+  

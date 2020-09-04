@@ -1,0 +1,50 @@
+
+ .features-list {
+  @include for-size(tablet-landscape){
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+      .item {
+        width: calc((100% - 60px) / 2);
+        margin: 15px;
+      }
+  }
+  @include for-size(desktop){
+    display: flex;
+    flex-wrap: unset;
+      .item{
+      margin: 15px;}
+ 
+      }
+  }
+  
+  .icon-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: $secondary-bg-color;
+    border-radius: 4px;
+  }
+  
+
+  .features-list .title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $title-text-color;
+    text-align:center;
+
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    @include for-size(tablet-landscape){
+    text-align:left;
+    }
+  }
+
+  .features-list p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }

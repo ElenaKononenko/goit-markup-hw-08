@@ -1,0 +1,14 @@
+.button.sub {
+    display: flex;
+    padding-top: 10px;
+    padding-right: 28px;
+    padding-bottom: 10px;
+    padding-left: 28px;
+    
+    margin-top: 20px;
+
+    @include for-size(desktop){
+      margin-top: 0;
+      margin-left: 12px;
+    }
+}

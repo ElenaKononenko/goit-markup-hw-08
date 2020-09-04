@@ -1,0 +1,29 @@
+.footer {
+    background-color: #2f303a;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .main-footer {
+    text-align: center;
+    
+    @include for-size(tablet-landscape){
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      justify-items: baseline;
+      }
+
+    @include for-size(desktop){
+    text-align: start;
+    display: flex;
+    align-items: baseline;
+  
+     .item + .item {
+        margin-left: 30px;
+      }
+    
+    }
+    
+  }
+  
