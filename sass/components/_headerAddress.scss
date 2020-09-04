@@ -1,14 +1,26 @@
 
 .add-header {
-    display: flex;
-    margin-left: auto;
+   
+    display: block;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+   
+
+    @include for-size(desktop){
+      display: flex;
+      align-items: baseline;
+      flex-wrap: nowrap;
+      
+
+    }
   }
   
   .add-header .item + .item {
-    margin-left: 30px;
+    margin-top: 10px;
+
+    @include for-size(desktop){
+     margin-left: 30px;
+
+    }
   }
   
   .add-header .link {

@@ -454,26 +454,14 @@ body {
   }
 }
 
-.site-nav-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.site-nav-logo .logo {
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 25px;
-}
-
 .logo {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 23px;
   color: #000000;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2;
   text-decoration: none;
   -webkit-transition-property: color;
@@ -490,6 +478,150 @@ body {
 
 .logo .logo-color {
   color: #2196f3;
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
+}
+
+header {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 98;
+}
+
+@media (max-width: 767px) {
+  header {
+    display: none;
+  }
+}
+
+.header-nav {
+  border-bottom: 1px solid #ECECEC;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.site-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+
+.site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: #212121;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav .link:hover, .site-nav .link:focus {
+  color: #2196f3;
+}
+
+.site-nav .link.current {
+  position: relative;
+  color: #2196f3;
+}
+
+.site-nav .link.current::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  bottom: -1px;
+  background-color: #2196f3;
+  border-radius: 2px;
+}
+
+.add-header {
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 1200px) {
+  .add-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.add-header .item + .item {
+  margin-top: 10px;
+}
+
+@media (min-width: 1200px) {
+  .add-header .item + .item {
+    margin-left: 30px;
+  }
+}
+
+.add-header .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #757575;
+  fill: currentColor;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.add-header .link:hover, .add-header .link:focus {
+  color: #2196f3;
+}
+
+.icon-style {
+  margin-right: 10px;
 }
 
 .button {

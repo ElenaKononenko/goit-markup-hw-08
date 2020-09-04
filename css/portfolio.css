@@ -453,26 +453,14 @@ body {
   }
 }
 
-.site-nav-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.site-nav-logo .logo {
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 25px;
-}
-
 .logo {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 23px;
   color: #000000;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2;
   text-decoration: none;
   -webkit-transition-property: color;
@@ -491,6 +479,12 @@ body {
   color: #2196f3;
 }
 
+@media (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
+}
+
 header {
   position: fixed;
   left: 50%;
@@ -499,6 +493,12 @@ header {
   width: 100%;
   background-color: #ffffff;
   z-index: 98;
+}
+
+@media (max-width: 767px) {
+  header {
+    display: none;
+  }
 }
 
 .header-nav {
@@ -512,13 +512,15 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .site-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 85px;
 }
 
 .site-nav .item + .item {
@@ -564,19 +566,33 @@ header {
 }
 
 .add-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
+  display: block;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+}
+
+@media (min-width: 1200px) {
+  .add-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 .add-header .item + .item {
-  margin-left: 30px;
+  margin-top: 10px;
+}
+
+@media (min-width: 1200px) {
+  .add-header .item + .item {
+    margin-left: 30px;
+  }
 }
 
 .add-header .link {
