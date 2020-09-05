@@ -1,5 +1,16 @@
-.portfolio {
-    padding-top: 94px;
-    padding-bottom: 94px;
-    /* outline: 2px solid tomato; */
-  }
+// .portfolio {
+//     padding-top: 94px;
+//     padding-bottom: 94px;
+//     /* outline: 2px solid tomato; */
+//   }
+  .portfolio {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    
+    @include for-size(desktop) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
+  
+}

@@ -1,21 +1,33 @@
 
-.add-header {
+  .add-header {
+    
+    .item{
+       text-align: center;
+      }
+      
+    @media (max-width: 767px ){
+      margin-top: 60px;  
+    }
    
-    display: block;
-    align-items: center;
-   
-
+    @include for-size(tablet-landscape){
+      display: block;
+      align-items: center;
+    }
+    
     @include for-size(desktop){
       display: flex;
       align-items: baseline;
       flex-wrap: nowrap;
-      
-
     }
   }
   
   .add-header .item + .item {
+    
+    margin-top: 16px;
+
+    @include for-size(tablet-landscape) {
     margin-top: 10px;
+    }
 
     @include for-size(desktop){
      margin-left: 30px;
@@ -24,9 +36,9 @@
   }
   
   .add-header .link {
-    display: flex;
-    align-items: center;
-  
+    // display: flex;
+    // align-items: center;
+    display: block;
     color: $primary-text-color;
     fill: currentColor;
   
@@ -41,6 +53,12 @@
       &:hover,
       &:focus {
         color: $accent-color;}
+
+        @include for-size(tablet-landscape) {
+          display: flex;
+          align-items: center;
+        
+        }
   }
   
   

@@ -10,39 +10,46 @@
     <!--Верхняя линия-->
     <header class="header-nav">
         <div class="container main-nav">
-          <div><a class="logo" href="./index.html"
-            ><span class="logo-color">Web</span> Studio</a
-          >
-          </div>
-          <nav class="site-nav-logo">
-            
-          <ul class="site-nav list">
-            <li class="item"><a href="" class="link current">Студия</a></li>
-            <li class="item">
-              <a href="./portfolio.html" class="link">Портфолио</a>
-            </li>
-            <li class="item"><a href="" class="link">Контакты</a></li>
-          </ul>
-        </nav>
+            <div class="logo-box"><a class="logo" href="./index.html"
+              ><span class="logo-color">Web</span> Studio</a>
+            </div>
+            <button class="menu-btn" type="button">
+              <svg width="40" height="40" >
+                <use class="menu-btn-icon" href="./img/symbol-defs.svg#icon-menu-btn-1"></use>
+                <use class="menu-btn-icon" href="./img/symbol-defs111.svg#icon-close"></use>
+              </svg>
+            </button>
+          <div class="site-nav-add">
+            <nav class="site-nav-logo">
+              
+              <ul class="site-nav list">
+                <li class="item"><a href="" class="link current">Студия</a></li>
+                <li class="item">
+                  <a href="./portfolio.html" class="link">Портфолио</a>
+                </li>
+                <li class="item"><a href="" class="link">Контакты</a></li>
+              </ul>
+            </nav>
 
-        <ul class="add-header list">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="link">
-              <svg class="icon-style" height="11.2" width="16">
-                <use href="./img/symbol-defs111.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="link">
-              <svg class="icon-style" height="14" width="10">
-                <use href="./img/symbol-defs111.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+              <ul class="add-header list">
+                <li class="item">
+                  <a href="mailto:info@devstudio.com" class="link">
+                    <svg class="icon-style" height="11.2" width="16">
+                      <use href="./img/symbol-defs111.svg#icon-envelope"></use>
+                    </svg>
+                    info@devstudio.com</a
+                  >
+                </li>
+                <li class="item">
+                  <a href="tel:+380961111111" class="link">
+                    <svg class="icon-style" height="14" width="10">
+                      <use href="./img/symbol-defs111.svg#icon-phone"></use>
+                    </svg>
+                    +38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </div>
       </div>
     </header>
     <main>
@@ -505,9 +512,7 @@
              
                 <label class="label-agree">
                       <input class="input-agree visually-hidden" type="checkbox" name="agree"  checked>
-                      <span class="checkbox"></span>
-                      
-                      Соглашаюсь с рассылкой и принимаю <a class="link-agree" href="#">Условия договора</a>
+                      <span class="checkbox"></span> <span class="label-agree-text">Соглашаюсь с рассылкой и принимаю <a class="link-agree" href="#">Условия договора</a></span> 
                 </label> 
               
               <div class="form-sub-btn">

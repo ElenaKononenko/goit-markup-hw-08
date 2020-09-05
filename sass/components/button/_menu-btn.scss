@@ -1,0 +1,8 @@
+.menu-btn{
+    @media (min-width: 768px){
+        display: none;
+    }
+}
+.menu-btn-icon{
+    fill: $title-text-color;
+}

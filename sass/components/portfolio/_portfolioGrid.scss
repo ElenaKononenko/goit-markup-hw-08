@@ -1,14 +1,35 @@
+
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .grid-item{
-    width: calc((100% - 60px) / 3);
+    @include for-size(tablet-landscape){
+        display: flex;
+        flex-wrap: wrap;  
+    }
+}
+.grid-item{
+    @media (max-width:767px){
+        &:nth-child(n + 2) {
+            margin-top: 30px;
+        }
+    }
+    @media (min-width:768px) and (max-width: 1199px) {
+        width: calc((100% - 30px) / 2);
+    
+        &:not(:nth-child(2n)) {
+            margin-right: 30px;
+        }
+        &:nth-child(n + 3) {
+            margin-top: 30px;
+        } 
+    }
+
+     @include for-size(desktop) {
+        width: calc((100% - 60px) / 3);
     
         &:not(:nth-child(3n + 3)) {
             margin-right: 30px;
         }
-        &:not(:nth-last-child(-n + 3)) {
-            margin-bottom: 30px;
-        }
+        &:nth-child(n + 4) {
+            margin-top: 30px;
+        }  
+     }
 }

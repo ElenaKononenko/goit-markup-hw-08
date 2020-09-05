@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* raleway-700 - latin */
 @font-face {
   font-family: 'Raleway';
@@ -454,10 +453,13 @@ body {
   }
 }
 
+.logo-box {
+  display: inline-block;
+  margin-right: 88px;
+}
+
 .logo {
   display: block;
-  padding-top: 20px;
-  padding-bottom: 23px;
   color: #000000;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -496,42 +498,90 @@ header {
   z-index: 98;
 }
 
-@media (max-width: 767px) {
-  header {
-    display: none;
-  }
-}
-
 .header-nav {
   border-bottom: 1px solid #ECECEC;
 }
 
-.main-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+@media (min-width: 768px) {
+  .main-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
-.site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (max-width: 767px) {
+  .site-nav-add {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    max-height: 393px;
+    padding: 60px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  }
 }
 
-.site-nav .item + .item {
-  margin-left: 50px;
+@media (min-width: 768px) {
+  .site-nav-add {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+.menu-btn-icon {
+  fill: #212121;
+}
+
+@media (max-width: 767px) {
+  .site-nav {
+    text-align: center;
+  }
+  .site-nav .item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 84px;
+  }
+  .site-nav .item + .item {
+    margin-left: 50px;
+  }
 }
 
 .site-nav .link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   color: #212121;
   font-weight: 500;
   font-size: 14px;
@@ -550,6 +600,19 @@ header {
   color: #2196f3;
 }
 
+@media (max-width: 767px) {
+  .site-nav .link {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-nav .link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
 .site-nav .link.current {
   position: relative;
   color: #2196f3;
@@ -566,11 +629,29 @@ header {
   border-radius: 2px;
 }
 
-.add-header {
-  display: block;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media (max-width: 767px) {
+  .site-nav .link.current::after {
+    bottom: -12px;
+  }
+}
+
+.add-header .item {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .add-header {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .add-header {
+    display: block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -587,7 +668,13 @@ header {
 }
 
 .add-header .item + .item {
-  margin-top: 10px;
+  margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+  .add-header .item + .item {
+    margin-top: 10px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -597,12 +684,7 @@ header {
 }
 
 .add-header .link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: block;
   color: #757575;
   fill: currentColor;
   font-weight: 500;
@@ -618,6 +700,17 @@ header {
 
 .add-header .link:hover, .add-header .link:focus {
   color: #2196f3;
+}
+
+@media (min-width: 768px) {
+  .add-header .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .icon-style {
@@ -693,6 +786,7 @@ main {
 .hero.background {
   padding-top: 118px;
   width: 100%;
+  max-width: 1600px;
   height: 400px;
   background-color: #000000;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/Headerimg.jpg);
@@ -1281,6 +1375,7 @@ address .link:not(:last-child) {
   z-index: 100;
   opacity: 1;
   display: block;
+  overflow-y: scroll;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1320,14 +1415,25 @@ address .link:not(:last-child) {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 528px;
-  height: 581px;
-  /* чтоб в мобилку влезло */
+  max-width: 450px;
   padding: 40px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    height: 581px;
+  }
 }
 
 /* 
@@ -1345,7 +1451,13 @@ address .link:not(:last-child) {
   text-align: center;
   color: #212121;
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 1200px) {
+  .modal-form-title {
+    text-align: start;
+  }
 }
 
 .modal-input {
@@ -1412,7 +1524,7 @@ address .link:not(:last-child) {
 
 .modal-icon-box {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .modal-icon {
@@ -1445,13 +1557,19 @@ address .link:not(:last-child) {
 .checkbox {
   position: absolute;
   top: 50%;
-  left: 7px;
+  left: 0;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
   border-radius: 2px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+@media (min-width: 1200px) {
+  .checkbox {
+    left: 7px;
+  }
 }
 
 .input-agree:checked + .checkbox {
@@ -1469,7 +1587,15 @@ address .link:not(:last-child) {
 .label-agree {
   position: relative;
   display: block;
-  padding-left: 37px;
+  padding-left: 20px;
+  font-size: 12px;
+}
+
+@media (min-width: 1200px) {
+  .label-agree {
+    font-size: 14px;
+    padding-left: 37px;
+  }
 }
 
 .input-agree.visually-hidden {

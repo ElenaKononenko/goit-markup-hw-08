@@ -10,6 +10,7 @@
     opacity: 1;
   
     display: block;
+    overflow-y: scroll;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
@@ -44,13 +45,22 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 528px;
-    height: 581px;
-    /* чтоб в мобилку влезло */
+    max-width: 450px;
+    
+
     padding: 40px;
     background-color: $primary-white-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    @include for-size(tablet-landscape){
+      max-width: 450px;
+    }
+
+    @include for-size(desktop){
+     max-width: 528px;
+    height: 581px;
+    }
   }
   /* 
   @keyframes change-opacity {
@@ -70,7 +80,11 @@
     text-align: center;
     color: $title-text-color;
     margin-top: 0;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+
+    @include for-size(desktop){
+      text-align: start;
+     }
     }
   
   .modal-input {
@@ -122,7 +136,7 @@
   }
   .modal-icon-box{
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   
   .modal-icon{
@@ -149,12 +163,16 @@
   .checkbox{
     position: absolute;
     top: 50%;
-    left: 7px;
+    left: 0;
     width: 16px;
     height: 15px;
     border: 2px solid $title-text-color;
     border-radius: 2px;
     transform: translateY(-50%);
+
+    @include for-size(desktop){
+      left: 7px;
+    }
    
   
   .input-agree:checked + & {
@@ -173,8 +191,15 @@
   .label-agree{
    position: relative;
    display: block;
-   padding-left: 37px;
+   padding-left: 20px;
+   font-size: 12px;
+
+  @include for-size(desktop){
+    font-size: 14px;
+    padding-left: 37px;
   }
+  }
+
   .input-agree.visually-hidden {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
