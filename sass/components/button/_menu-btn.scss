@@ -2,7 +2,39 @@
     @media (min-width: 768px){
         display: none;
     }
+   
+    display: flex;
+    border: none;
+    background-color: transparent;
+    outline: none;
+
+    .menu-btn-icon{
+      align-self: center;
+
+    }
+
+    &:hover .menu-btn-icon,
+    &:focus .menu-btn-icon {
+        fill: $hover-color-blue;
+        }
 }
-.menu-btn-icon{
-    fill: $title-text-color;
-}
+
+
+  .menu-btn .icon-close {
+    display: none;
+  }
+  
+  .menu-btn.is-open {
+   .icon-close {
+     display: block;}
+
+  .icon-menu {
+      display: none;
+    }
+  }
+  
+ 
+
+
+
+  

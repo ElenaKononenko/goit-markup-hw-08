@@ -7,7 +7,7 @@
       margin-bottom: 40px;
     }
       // .item:not(:first-child){
-      //  margin-top: 40px;
+      //  margin-top: 40px;;
       // }
      
   }
@@ -57,7 +57,7 @@
   .site-nav .link.current {
     position: relative;
     color: $accent-color;
-    
+       
   
       &::after{
         position: absolute;
@@ -71,10 +71,8 @@
         border-radius: 2px;
       }  
 
-      
       @media (max-width: 767px ){
-        &::after{
-          bottom:-12px;
-        }
-  }
+        padding-bottom: 8px;
+       
+  }  
 }

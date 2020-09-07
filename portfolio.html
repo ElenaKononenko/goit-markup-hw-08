@@ -3,46 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Studio</title>
+    <title>WebStudio</title>
     <link rel="stylesheet" href="./css/portfolio.min.css" />
   </head>
   <body>
     <header class="header-nav">
       <div class="container main-nav">
-        <div><a class="logo" href="./index.html"
-          ><span class="logo-color">Web</span> Studio</a
-        >
+          <div class="logo-box"><a class="logo" href="./index.html"
+            ><span class="logo-color">Web</span>Studio</a>
+            
+            <button class="menu-btn" type="button"data-menu-button>
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="menu-btn-icon icon-menu" href="./img/symbol-defs.svg#icon-menu-btn-1"></use>
+              <use class="menu-btn-icon icon-close" href="./img/symbol-defs111.svg#icon-close"></use>
+            </svg>
+          </button>
+          </div>
+          
+        <div class="site-nav-add" data-menu>
+          <nav class="site-nav-logo">
+           
+              <ul class="site-nav list">
+                <li class="item"><a href="./index.html" class="link">Студия</a></li>
+                <li class="item">
+                  <a href="./portfolio.html" class="link current">Портфолио</a>
+                </li>
+                <li class="item"><a href="" class="link">Контакты</a></li>
+              </ul>
+            </nav>
+
+            <ul class="add-header list">
+              <li class="item">
+                <a href="mailto:info@devstudio.com" class="link">
+                  <svg class="icon-style" height="11.2" width="16">
+                    <use href="./img/symbol-defs111.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="item">
+                <a href="tel:+380961111111" class="link">
+                  <svg class="icon-style" height="14" width="10">
+                    <use href="./img/symbol-defs111.svg#icon-phone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
         </div>
-        <nav class="site-nav-logo">
-
-          <ul class="site-nav list">
-            <li class="item"><a href="./index.html" class="link">Студия</a></li>
-            <li class="item">
-              <a href="./portfolio.html" class="link current">Портфолио</a>
-            </li>
-            <li class="item"><a href="" class="link">Контакты</a></li>
-          </ul>
-        </nav>
-
-        <ul class="add-header list">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="link">
-              <svg class="icon-style" height="11.2" width="16">
-                <use href="./img/symbol-defs111.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="link">
-              <svg class="icon-style" height="14" width="10">
-                <use href="./img/symbol-defs111.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
-      </div>
+        </div>
+     
     </header>
     <main>
       <!--Навигация по проэктам-->
@@ -64,7 +74,7 @@
                 <label for="radio3" class="radio-label">Приложения</label>
             </li>
             <li class="item">
-                <input type="radio" id="radio4" name="filter" class="radio-input visually-hidden"value="Дизайн"/>
+                <input type="radio" id="radio4" name="filter" class="radio-input visually-hidden" value="Дизайн"/>
                 <label for="radio4" class="radio-label">Дизайн</label>
             </li>
             <li class="item">
@@ -296,7 +306,7 @@
         <!--Адрес-->
         <div class="foot-address item">
           <a href="./index.html" class="logo"
-            ><span class="logo-color">Web</span> Studio</a
+            ><span class="logo-color">Web</span>Studio</a
           >
           <address>
             <p>г. Киев, пр-т Леси Украинки, 26</p>
@@ -354,5 +364,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>
