@@ -10,21 +10,74 @@
   
     background-color: #000000;
     background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../img/Headerimg.jpg);
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url(../img/mob/Headerimg-mob.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
     background-position: center;
     margin-left: auto;
     margin-right: auto;
+      
+      @media screen and (min-device-pixel-ratio: 2),
+          screen and (min-resolution: 192dpi),
+          screen and (min-resolution: 2dppx) {
+            
+          background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)),
+           url(/img/mob/Headerimg-mob@2x.jpg);
+      }
+     
+      
+      @include for-size(tablet-landscape ){
+        background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../img/tab/Headerimg-tab.jpg);
+        
+          @media
+          screen and (min-device-pixel-ratio: 2),
+          screen and (min-resolution: 192dpi),
+          screen and (min-resolution: 2dppx) {
+            background-image:linear-gradient(
+              rgba(47, 48, 58, 0.4),
+              rgba(47, 48, 58, 0.4)
+            ), url(/img/tab/Headerimg-tab@2x.jpg);
+              }
+        }
 
-    @include for-size(desktop) {
-    height: 600px;
-    padding-top: 200px;}
+        @include for-size(desktop) {
+        height: 600px;
+        padding-top: 200px;
+        background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../img/desk/Headerimg-desk.jpg);
+      
+            @media
+            screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+              background-image:linear-gradient(
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)
+              ), url(/img/desk/Headerimg-desk@2x.jpg);
+                }
+
+      }
    }
+
+  //  @media screen and (min-device-pixel-ratio: 2),
+  // screen and (min-resolution: 192dpi),
+  // screen and (min-resolution: 2dppx) {
+  //   .hero.background {
+  //   background-image: url(/img/tab/Headerimg-tab.jpg);
+  //   }
+  // }
   
   .hero-title {
     color: $primary-white-color;
