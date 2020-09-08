@@ -27,7 +27,7 @@
           background-image: linear-gradient(
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)),
-           url(/img/mob/Headerimg-mob@2x.jpg);
+           url(../img/mob/Headerimg-mob@2x.jpg);
       }
      
       
@@ -45,7 +45,7 @@
             background-image:linear-gradient(
               rgba(47, 48, 58, 0.4),
               rgba(47, 48, 58, 0.4)
-            ), url(/img/tab/Headerimg-tab@2x.jpg);
+            ), url(../img/tab/Headerimg-tab@2x.jpg);
               }
         }
 
@@ -65,19 +65,12 @@
               background-image:linear-gradient(
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)
-              ), url(/img/desk/Headerimg-desk@2x.jpg);
+              ), url(../img/desk/Headerimg-desk@2x.jpg);
                 }
 
       }
    }
 
-  //  @media screen and (min-device-pixel-ratio: 2),
-  // screen and (min-resolution: 192dpi),
-  // screen and (min-resolution: 2dppx) {
-  //   .hero.background {
-  //   background-image: url(/img/tab/Headerimg-tab.jpg);
-  //   }
-  // }
   
   .hero-title {
     color: $primary-white-color;
